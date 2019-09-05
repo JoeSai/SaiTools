@@ -1,0 +1,46 @@
+<view class="container">
+  
+  
+
+  <view class='time_box'>
+    
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange"  value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="time">
+      {{multiArray[0][multiIndex[0]]}}(h)：{{multiArray[1][multiIndex[1]]}}(m)：{{multiArray[2][multiIndex[2]]}}(s)
+      </view>
+      
+    </picker>
+
+  </view> 
+
+  <view class='progress_box'>
+        <canvas class="progress_bg"   canvas-id="canvasProgressbg">  </canvas> 
+        <canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas> 
+        <view class="progress_text">
+            <view class="progress_dot"></view> 
+            <text class='progress_info'> {{progress_txt}}</text>
+        </view>     
+  </view> 
+
+  <view class='bt_box'>
+ 
+    <view class="NoPushImg" hover-class="PushImg" bindtap='TimerClear'>
+        <image 
+        style="width: 60px; height: 60px; 
+        src="../../assets/img/TimerDel.png"></image>
+    </view>
+
+    <!-- 暂停未写 -->
+    <view class="NoPushImg" hover-class="PushImg" bindtap="TimerStarOrStop"> 
+      <image 
+      style="width: 60px; height: 60px; 
+      src="../../assets/img/TimerStart.png"></image>
+    </view>
+
+  </view>  
+
+    
+
+   
+
+</view>

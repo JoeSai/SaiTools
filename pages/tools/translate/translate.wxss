@@ -1,0 +1,142 @@
+/* pages/tools/translate/translate.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color:#f7f8f9;
+}
+
+.translate{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content:flex-start;
+  flex-direction: column;
+  flex-wrap:wrap;
+}
+
+
+.top{
+   color: #8995a1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 30%;
+}
+.mid1{
+  height: 7%;
+  padding: 30rpx 0rpx 0rpx 0rpx;
+  font-size: 30rpx;
+  background:#fff;
+  text-align:center;
+}
+.mid2{
+  height: 52%;
+  /* background: green; */
+  padding:5px;
+}
+.foot{
+  height: 8%;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+}
+.query{
+  width: 95%;
+  height: 95%;
+  background:#fff;
+  border-bottom: 1px solid #c7cee0;
+  border-radius: 5%;
+} 
+textarea{
+  /* width: 100%; */
+  background-color: #fff;
+  padding: 30rpx 0rpx 30rpx 30rpx;
+  width: calc(100% - 48rpx);
+  box-sizing: border-box;
+}
+
+
+/* .language-choose-block{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 45%;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  transform: translateY(150%);
+  transition: all 0.5s ease;
+  
+} */
+
+/* 学习flxed布局 */
+.language-choose-block{
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  bottom: 0;
+  height: 45%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: all 0.5s ease;
+  
+}
+.language-choose-block-up{
+  transform: translateY(0);
+  
+}
+
+
+.downIcon{
+  height: 10%;
+  width: 10%;
+
+
+}
+.language-chooseBtn-block{
+  background-color: #cdcdcd;
+  display: flex;
+  justify-content: center;
+  
+  border-radius:5% 5% 0% 0%;
+  height: 90%;
+  width: 100%;
+  
+}
+
+
+.radio-group{ 
+ width: 100%; 
+ /* background-color: greenyellow; */
+ display: flex;
+ justify-content: space-around;
+ flex-wrap:wrap;
+ align-content: space-around;
+} 
+
+label{ 
+ padding: 10px 0; 
+ /* margin: 10px 10px; */
+ display: inline-block; 
+ width: 40%; 
+ /* background-color: gray; */
+ border:2px solid #ddd;
+ border-radius: 5%;
+ text-align: center; 
+} 
+radio{
+  display: none;
+}
+
+.chooseLanguageBtn{
+  width: 50%;
+}
+.translateBtn{
+  width: 50%;
+}

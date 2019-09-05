@@ -1,0 +1,42 @@
+<view class="translate">
+
+  <view class='top'>
+    
+    <view class='query'>
+      <textarea placeholder='请输入要翻译的文本' maxlength='-1' placeholder-styl1e='color: #8995a1' bindinput='input'></textarea>
+
+    </view>
+
+  </view>
+
+
+ <view class='mid1'>
+    <view>翻译成{{langueArray[choose].value}}</view>
+  </view>
+
+  <view class='mid2'>
+    
+  </view>
+
+  <view class='foot'>
+    <button class='chooseLanguageBtn' catchtap="chooseBlockUp">译文语言</button>
+    <button class='translateBtn' catchtap='translate'>全部翻译</button>
+  </view>
+</view>
+
+<!-- 语言选择块-->
+<view class="language-choose-block {{ ifUp ? 'language-choose-block-up' : '' }}"  >
+  <view class='downIcon' catchtap="chooseBlockDown"><!--  语言选择块下降隐藏-->
+    <image style='height:100%;width:100%;' src='../../assets/img/TranslateDown.png' ></image>
+  </view>
+  <view class='language-chooseBtn-block' direction='vertical' >
+    <radio-group class="radio-group" bindchange="radioChange">   
+      <label class="radio" wx:for="{{langueArray}}" wx:key="{{langueArray}}" style="border-color:{{index==choose? '#96bcff':'#ddd'}}">
+      
+          <radio value="{{item.id}}" checked="{{item.checked}}" />
+          {{item.value}}
+      
+        </label>
+    </radio-group>
+  </view>
+</view>

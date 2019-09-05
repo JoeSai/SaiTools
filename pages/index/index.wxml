@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="head">
+ 
+      <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" >
+        <block wx:for="{{imgUrls}}" wx:key="*this">
+          <swiper-item class="topSwiperItem">
+             <image style='width:95%;height:95%' mode='scaleToFill' src="{{item}}"  />
+          </swiper-item>
+        </block>
+      </swiper>
+    
+  </view>
+
+  <view class="mid">
+ 
+    <view class='date'>{{date}}</view>
+      <!--中英文语录  -->
+    
+
+    <view class='quotationBlock'>
+    <scroll-view
+      scroll-y 
+      style="height: 90%;"
+    >
+      <view class='quotation'>
+        <view style='margin-bottom:50rpx'>{{eQuotation}}</view>
+        <view>{{cQuotation}}</view>
+      </view>
+    </scroll-view>
+    </view>
+
+
+  </view>
+
+  <view class="foot">
+    <swiper
+    indicator-dots="{{indicatorDots}}">
+    <block wx:for="{{toolbtn}}"  wx:for-index="idx">
+        <swiper-item class="footSwiperItem">
+        
+          <block wx:for="{{toolbtn[idx]}}" >
+            <view class="blo">
+              <image src='{{item.imgUrl}}' class="toolbtn"  data-itemid='{{item.id}}' catchtap="navigator"></image>
+              <view>{{item.name}}</view>
+            </view>
+          </block>
+
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+
+</view>

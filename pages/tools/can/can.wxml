@@ -1,0 +1,10 @@
+<!--pages/can/can.wxml-->
+<view class="content">
+<canvas style="width: {{canvasw}}px; height: {{canvash}}px" class="canvas" id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="canvasStart" bindtouchmove="canvasMove" bindtouchend="canvasEnd" touchcancel="canvasEnd" binderror="canvasIdErrorCallback"></canvas>
+  <view class='btnGroup'>
+    <button class='item orgen' bindtap="cleardraw">清除画板</button>
+    <button class='item orgen' bindtap="setSign">保存图片</button>
+  </view>
+
+
+</view>

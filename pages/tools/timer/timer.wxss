@@ -1,0 +1,101 @@
+/* pages/timer/timer.wxss */
+page{
+height: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  /* background-color: rgb(117, 122, 202) */
+  background-image:url(http://1.saier.sc2yun.com/TimerBg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+} 
+.progress_box{
+  position: relative;
+  width:220px;
+  height: 220px;  
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(117, 122, 202); */
+  
+}
+.progress_bg{
+  position: absolute;
+  width:220px;
+  height: 220px; 
+  /* background-color: rgb(117, 122, 202); */
+  
+}
+.progress_canvas{ 
+  position: absolute;
+  width:220px;
+  height: 220px; 
+  
+} 
+.progress_text{ 
+  position: absolute; 
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+.progress_info{   
+  font-size: 36rpx;
+  padding-left: 16rpx;
+  letter-spacing: 2rpx;
+  font-family:SimHei;
+} 
+.progress_dot{
+  width:16rpx;
+  height: 16rpx;  
+  border-radius: 50%;
+  background-color: #fb9126;
+}
+.NoPushImg{
+  width: 60px; 
+  height: 60px;
+  border-radius:50%;
+  background-color: #000C40;
+  opacity:0.9;
+}
+.PushImg{
+  width: 60px; 
+  height: 60px;
+  border-radius:50%;
+  background-color: #F0F2F0;
+   opacity:0.6;
+}
+.bt_box{
+  width: 100%; 
+  display: flex;
+  justify-content:space-around;
+}
+.time_box{
+  /* margin-bottom:10px */
+  /* position: absolute; */
+  /* top: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.time{
+  width: 250px;
+  height: 70px;
+  display: flex;
+  background-color: 	#4B79A1;
+  border-radius: 150px;
+  justify-content: center;
+  align-items: center;
+  font-family:SimHei;
+  font-size: 50rpx;
+  opacity:0.5;
+}

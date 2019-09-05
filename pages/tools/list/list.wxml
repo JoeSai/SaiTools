@@ -1,0 +1,11 @@
+<view class="content">
+<block wx:for="{{logs}}" wx:for-item="log">
+  <view class="item">{{log}}</view>
+</block>
+
+<movable-area style="height: {{winHeight}}px; width: {{winWidth}}px;">
+<movable-view x="{{x}}" y="{{y}}" direction="all" out-of-bounds="true" inertia="true" friction="4" bindtap="DelInfo">
+<image style="width: 60px; height: 60px; " mode="scaleToFill"  src="../../assets/img/Delete.png"></image>
+</movable-view>
+</movable-area>"
+</view>

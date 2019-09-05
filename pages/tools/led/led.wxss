@@ -1,0 +1,92 @@
+/* pages/tools/led/led.wxss */
+page{
+  height: 100%;
+}
+.wordCanvas{
+  background-color: black;
+  height: 100%;
+  width: 100%;
+ 
+}
+
+.chooseBlock{
+  width: 100%;
+  height: 7%;
+  position: absolute;
+  bottom:0rpx;
+  color:#fff;
+  background-color:rgba(0, 0, 0, 0.363);
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+
+}
+.input{
+  border: 2px solid white;
+  border-radius: 15px;
+  padding-left:15px;
+}
+.LedSet{
+  width: 100%;
+  height: 18%;
+  position: absolute;
+  bottom:8%;
+  background-color:rgba(0, 0, 0, 0.363);
+  display: flex;
+  align-items:center;
+  justify-content:flex-start;
+  align-content:space-around;
+  flex-wrap:wrap;
+}
+.SizeSetBlock{
+  width: 100%;
+  height: 33%;
+  /* background-color:green; */
+  display: flex;
+}
+.SpeedSetBlock{
+  width: 100%;
+  height: 33%;
+  /* background-color:red; */
+  display: flex;
+}
+.ColorSetBlock{
+  width: 100%;
+  height: 33%;
+  /* background-color:yellow; */
+  display: flex;
+  align-content:center;
+}
+.leftWord{
+  width:15%;
+  height: 100%;
+  /* border: 1px solid white; */
+  text-align:center;
+  line-height: 30px;
+  color: white;
+  font-size: 15px;
+}
+.RightSlider{
+  width:85%;
+  height: 100%;
+}
+.BtnGrounp{
+  width:85%;
+  height: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  background-color:yellow;
+}
+.ColorChooseBtn{
+  height: 80%;
+  width: 25px;
+  border-radius: 50%;
+
+}
+.PushColorChooseBtn{
+  height: 80%;
+  width: 25px;
+  border-radius: 50%;
+  border:1px solid white;
+}

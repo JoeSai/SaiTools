@@ -1,0 +1,27 @@
+<!--pages/tools/led/led.wxml-->
+<canvas class='wordCanvas' canvas-id='wordCanvas' catchtap="clickCanvas"></canvas>
+<view class="chooseBlock" hidden="{{inputHidden}}">
+  <input class='input' bindconfirm='inputComplete' placeholder='请输入文字'placeholder-style='font-size:15px' style='height:88%;width:75%' ></input>
+  <image src='../../assets/img/LedSet.png' catchtap="clickSet" style='height:90%;width:10%'></image>
+  
+</view>
+<view class='LedSet' hidden="{{setHidden}}">
+  <view class='SizeSetBlock'>
+    <view class='leftWord'>字号</view>
+    <view class='RightSlider'>
+      <slider  block-size='16' bindchanging="SizeSliderChange" min="0" max="100" show-value />
+    </view>
+  </view>
+  <view class='SpeedSetBlock'>
+    <view class='leftWord'>速度</view>
+    <view class='RightSlider'>
+      <slider  block-size='16' bindchanging="SpeedSliderChange" min="0" max="10" show-value />
+    </view>
+  </view>
+  <view class='ColorSetBlock'>
+    <view class='leftWord'>颜色</view>
+    <block class='BtnGrounp' wx:for-items="{{colorGrounp}}" wx:key="name">
+      <button class='ColorChooseBtn' hover-class='PushColorChooseBtn' style=' background-color:{{item.value}};' data-color='{{item.value}}' catchtap='ChooseColor'></button>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+/* pages/can/can.wxss */
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  /* background-image: url(http://1.saier.sc2yun.com/bg.jpg); */
+  background-repeat: no-repeat;
+  background-color: #C0C0C0;
+  padding-top: 30rpx;
+} 
+.page{
+  background: #f6f6f6;
+  padding: 5px auto
+}
+.canvas{
+  border: 1px solid #d0d0d0;
+  margin: 5rpx;
+  background: #f2f2f2;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.btnGroup{
+  display: flex;
+  flex-direction: row;
+}
+.item{
+  width: 160rpx;
+  min-height: 60rpx;
+  margin: 30rpx;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 60rpx;
+}
+.orgen{
+  color: #dae912;
+  border: solid 1px #da7c0c;
+  background: #aa8f739d;
+}

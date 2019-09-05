@@ -1,0 +1,41 @@
+<view class="content">
+<picker-view
+    indicator-style="height: 50px;"
+    style="width: 90%; height: 200px;"
+    value="{{value}}"
+    bindchange="bindChange"
+  >
+    
+    <picker-view-column>
+      <view wx:for="{{stars}}" style="line-height: 50px">{{item}}座</view>
+    </picker-view-column>
+  </picker-view>
+
+<button type='primary' class='btn' bindtap='btnClick'>查询</button>
+
+  <scroll-view
+    scroll-y
+    style="height: 300px;"
+    wx:if="{{condition}}"
+    
+  >
+<view class='starInfo'>
+<view>综合指数:{{starInfo.showapi_res_body.day.summary_star}}</view>
+<view>爱情指数:{{starInfo.showapi_res_body.day.love_star}}</view>
+<view>财富指数:{{starInfo.showapi_res_body.day.money_star}}</view>
+<view>工作指数:{{starInfo.showapi_res_body.day.work_star}}</view>
+<view>贵人星座:{{starInfo.showapi_res_body.day.grxz}}</view>
+<view>幸运数字:{{starInfo.showapi_res_body.day.lucky_num}}</view>
+<view>吉 时:{{starInfo.showapi_res_body.day.lucky_time}}</view>
+<view>吉利方位:{{starInfo.showapi_res_body.day.lucky_direction}}</view>
+<view>今日提醒:{{starInfo.showapi_res_body.day.day_notice}}</view>
+<view>运势简评:{{starInfo.showapi_res_body.day.general_txt}}</view>
+<view>爱情运势:{{starInfo.showapi_res_body.day.love_txt}}</view>
+<view>工作运势:{{starInfo.showapi_res_body.day.work_txt}}</view>
+<view>财富运势:{{starInfo.showapi_res_body.day.money_txt}}</view>
+<view>时间:{{starInfo.showapi_res_body.day.time}}</view>
+<view>吉色:{{starInfo.showapi_res_body.day.lucky_color}}</view>
+</view>
+</scroll-view>
+
+</view>

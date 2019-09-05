@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/tools/timer/timer",
+    "pages/tools/cal/cal",
+    "pages/tools/list/list",
+    "pages/tools/can/can",
+    "pages/tools/star/star",
+    "pages/tools/led/led",
+    "pages/tools/translate/translate"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "SaiTools",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "tools",
+        "iconPath": "pages/assets/img/Tools.png",
+        "selectedIconPath": "pages/assets/img/Tools.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "my",
+        "iconPath": "pages/assets/img/Home.png",
+        "selectedIconPath": "pages/assets/img/Home.png"
+      }
+    ],
+    "selectedColor": "#3CB371"
+  },
+  "sitemapLocation": "sitemap.json"
+}

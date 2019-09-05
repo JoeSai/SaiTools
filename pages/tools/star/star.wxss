@@ -1,0 +1,33 @@
+/* pages/note/note.wxss */
+
+input{
+  border: 1px solid green;
+  width: 90%;
+  margin: 5%;
+  padding: 5px;
+  
+}
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 30rpx;
+  /* background-color: rgba(48, 180, 197, 0.493); */
+  /* background-image: url(http://1.saier.sc2yun.com/bg2.jpg);
+  background-repeat: no-repeat; */
+} 
+
+.btn{
+  width: 200rpx;
+  min-height: 60rpx;
+  margin: 30rpx;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 60rpx;
+}
+.starInfo{
+  padding: 8px;
+}
