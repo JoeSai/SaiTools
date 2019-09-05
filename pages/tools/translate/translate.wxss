@@ -10,6 +10,7 @@ page{
   height: 100%;
   width: 100%;
   justify-content:flex-start;
+  align-items: center;
   flex-direction: column;
   flex-wrap:wrap;
 }
@@ -21,18 +22,25 @@ page{
    justify-content: center;
    align-items: center;
    height: 30%;
+   width: 100%;
 }
 .mid1{
   height: 7%;
+  width: 100%;
   padding: 30rpx 0rpx 0rpx 0rpx;
   font-size: 30rpx;
   background:#fff;
   text-align:center;
 }
 .mid2{
-  height: 52%;
-  /* background: green; */
+  height: 50%;
+  width: 95%;
+  background: #00CED1;
   padding:5px;
+  border-radius: 5%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
 }
 .foot{
   height: 8%;
@@ -49,6 +57,9 @@ page{
   border-bottom: 1px solid #c7cee0;
   border-radius: 5%;
 } 
+.transResult{
+  height: 95%;
+}
 textarea{
   /* width: 100%; */
   background-color: #fff;

@@ -33,13 +33,16 @@ Page({
     salt: 123,  //随机数
     sign: null,  //签名 appid+q+salt+密钥 的MD5值
     cipher: 'VpUyPUlLjLYnLiIOBnil',//密钥
-    sign2: null
+    sign2: null,
+    transResult:null,
   },
   //选择块下降
   chooseBlockDown() {
+    console.log("down")
     this.setData({
       ifUp: false
     })
+    console.log("down")
   },
   //选择块上升
   chooseBlockUp() {
@@ -73,22 +76,34 @@ Page({
 
       /**!!!!!!!!!这里的 this.data.query为上面query赋值之前的状态 延后！！  ！！要用两次setDate*/
     })
+    console.log("str1:", '20190414000287751' + this.data.query + this.data.salt + this.data.cipher)
     this.setData({
-      sign: md5.hexMD5('20190414000287751' + this.data.query + this.data.salt + this.data.cipher)
+      sign: md5.MD5('20190414000287751' + this.data.query+ this.data.salt + this.data.cipher)  
+      // sign: '259b1bce3699ff5a8af86ce66787afaf' 
     })
   
 
+  },
+  utf8(query){
+    var utf8_q = encodeURIComponent(query);
+    return utf8_q;
   },
 
   //全部翻译
   translate() {
     var utf8_q = encodeURIComponent(this.data.query);
     console.log(utf8_q);
+    console.log("this.data.query:", this.data.query)  
+    /*
+    注意在生成签名拼接 appid+q+salt+密钥 字符串时，q不需要做URL encode.
+    在生成签名之后，发送HTTP请求之前才需要对要发送的待翻译文本字段q做URL encode。
+    */
     this.getTranslateInfo(utf8_q, this.data.from, this.data.to, this.data.salt, this.data.sign)
   },
 
   // 百度翻译
   getTranslateInfo: function (query, from, to, salt, sign) {
+    var that = this;
     wx.request({
       url: 'https://fanyi-api.baidu.com/api/trans/vip/translate?q=' + query + '&from=' + 'auto' + '&to=' + to + '&appid=20190414000287751' + '&salt=' + salt + '&sign=' + sign,
       data: {
@@ -96,8 +111,37 @@ Page({
       },
       method: 'POST',
       success(res) {
+        // wx.showToast({
+        //   title: '成功',
+        //   icon: 'loading',
+        //   duration: 1000,
+        //   mask: true
+        // })
+
         console.log(res.data)
-        console.log(md5.hexMD5('20190414000287751我123VpUyPUlLjLYnLiIOBnil'))
+        if (!res.data.error_code)
+        {
+          
+          that.setData({
+            transResult: res.data.trans_result[0].dst
+            // transResult: "asdddddddddd"
+            // sign: '259b1bce3699ff5a8af86ce66787afaf' 
+          })
+        }
+        else{
+            wx.showToast({
+            title: '稍等片刻',
+            icon: 'loading',
+            duration: 1000,
+            mask: true
+        })
+        }
+        // console.log(md5.hexMD5('20190414000287751我123VpUyPUlLjLYnLiIOBnil'))
+      },
+      fail(res){
+        that.setData({
+          transResult: "翻译异常"
+        })
       }
 
     })
@@ -107,17 +151,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     var randomNumber = Math.round(Math.random() * 1000);    //随机数
     this.setData({
       salt: randomNumber
-    })
-
-    var a = 20190414000287111;
-    // this.setData({
-    //   appid: a+1
-    // })
-
+    });
   },
 
   /**
@@ -167,6 +204,7 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
   
 })

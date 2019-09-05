@@ -29,6 +29,7 @@ Page({
       ],
       [
         { id: 4, imgUrl: '../assets/img/Led.png', url: '../tools/led/led', name: '手持弹幕' },
+        { id: 5, imgUrl: '../assets/img/Translate.png', url: '../tools/translate/translate', name: '在线翻译' },
       ]
 
     ],

@@ -3,7 +3,7 @@
   <view class='top'>
     
     <view class='query'>
-      <textarea placeholder='请输入要翻译的文本' maxlength='-1' placeholder-styl1e='color: #8995a1' bindinput='input'></textarea>
+      <textarea placeholder='请输入要翻译的文本' maxlength='150' placeholder-styl1e='color: #8995a1' bindinput='input'></textarea>
 
     </view>
 
@@ -15,7 +15,9 @@
   </view>
 
   <view class='mid2'>
-    
+
+    <textarea hidden  = "{{ifUp}}" class='transResult' maxlength='-1' value='{{transResult}}'></textarea>
+
   </view>
 
   <view class='foot'>
